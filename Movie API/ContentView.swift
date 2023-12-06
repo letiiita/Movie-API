@@ -9,11 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        VStack (spacing: 20) {
+            Image("cat")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .clipShape(Rectangle())
+            //placeholder for movie poster
+            Text("Movie Title")
+                .bold()
+                .font(.largeTitle)
+            //plscehodler for Movie Title
+            Text("Small description for the movie")
+                .font(.subheadline)
+            //placeholder for description i am coming back and forth from my sleep.
         }
         .padding()
     }
@@ -24,3 +32,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
